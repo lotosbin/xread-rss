@@ -1,5 +1,6 @@
 # api to rss
 
+## eleduck /rss/eleduck/normal
 
 ## xread /rss/guess/read
 

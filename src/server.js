@@ -10,6 +10,8 @@ import R from 'ramda';
 const _ = require('koa-route');
 import * as xread from './backend/xread';
 import * as union from './backend/union';
+import eleduck from "./backend/eleduck";
+
 const pets = {
     rest: async (ctx) => {
         //http://union.yuanjingtech.com/home/newjson?pagesize=100
@@ -52,6 +54,7 @@ const pets = {
     },
 };
 
+app.use(_.get('/rss/eleduck/normal', eleduck.normal));
 app.use(_.get('/rss/rest', pets.rest));
 app.use(_.get('/rss/guess/read', pets.read));
 app.use(_.get('/rss/', pets.normal));
