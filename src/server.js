@@ -56,5 +56,4 @@ app.use(_.get('/rss/rest', pets.rest));
 app.use(_.get('/rss/guess/read', pets.read));
 app.use(_.get('/rss/', pets.normal));
 
-
-app.listen(4001);
+app.listen(process.env.PORT || 4001);
